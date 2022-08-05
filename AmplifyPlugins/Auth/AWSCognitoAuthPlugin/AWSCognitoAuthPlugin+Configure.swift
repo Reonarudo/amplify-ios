@@ -137,8 +137,7 @@ extension AWSCognitoAuthPlugin {
 
             let endpointStringWithScheme = "https://" + endpointString
             guard
-                let components = URLComponents(string: endpointStringWithScheme),
-                components.path == "",
+                let components = URLComponents(string: endpointStringWithScheme)
                 let url = components.url
             else {
                 throw amplifyError
