@@ -38,7 +38,7 @@ open class AmplifyOperation<Request: AmplifyOperationRequest, Success, Failure: 
     public let id: UUID
 
     /// Incoming parameters of the original request
-    public let request: Request
+    public var request: Request
 
     /// All AmplifyOperations must be associated with an Amplify Category
     public let categoryType: CategoryType
