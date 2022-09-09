@@ -128,6 +128,9 @@ extension AWSCognitoAuthPlugin {
     service.maxRetryCount = networkPreferences.maxRetryCount
     service.timeoutIntervalForRequest = networkPreferences.timeoutIntervalForRequest
     service.timeoutIntervalForResource = networkPreferences.timeoutIntervalForResource
+    if service.headers == nil {
+      service.headers = [:]
+    }
     service.headers.merge(networkPreferences.headers){ (_, new) in new }
   }
 
